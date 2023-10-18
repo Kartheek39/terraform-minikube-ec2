@@ -23,7 +23,7 @@ resource "aws_instance" "this" {
       type = "ssh"
       host = self.public_ip
       user = "ubuntu"
-      private_key = file("./practice_key")
+      private_key = file("./practice_key.pem")
     }
   }
 }
