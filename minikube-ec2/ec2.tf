@@ -3,6 +3,10 @@ resource "aws_instance" "this" {
   instance_type           = "t2.medium"
   availability_zone = "us-east-1a"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
+  key_name = "practice_key"
+  tags = {
+    name = "minikube"
+  }
 
 
 
